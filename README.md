@@ -56,11 +56,11 @@ This architecture applies industry-standard security principles to defend server
 3. GitOps CI/CD Automation: Standardized infrastructure delivery through a complete GitHub Actions automation model, executing automatic code checks and batch streaming production updates cleanly on active repository pushes.
 
 📁 Repository Blueprint
-
+```text
 ├── .github/workflows/
 │   └── frontend-deploy.yml    # GitHub Actions CI/CD automation pipeline configuration
 ├── index.html                  # Core resume portfolio structural asset with embedded counter driver
 ├── style.css                   # Responsive layout visual presentation engine
 └── README.md                   # Technical breakdown, architectural mapping, and asset catalog
-
+```
 💡 Engineered as part of the Azure Cloud Resume Challenge to demonstrate advanced competencies in cloud infrastructure design, serverless software configurations, and continuous deployment automation pipelines.
