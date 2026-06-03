@@ -1,0 +1,276 @@
+:root {
+    --primary-color: #0078d4; /* Azure Blue */
+    --secondary-color: #24292e; /* Slate Black */
+    --text-color: #333333;
+    --light-bg: #f5f6f8;
+    --border-color: #e1e4e8;
+    --accent-color: #005a9e;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: #f9fafb;
+}
+
+/* Header Styling */
+.resume-header {
+    background-color: var(--secondary-color);
+    color: #ffffff;
+    padding: 3rem 1.5rem;
+    border-bottom: 4px solid var(--primary-color);
+}
+
+.header-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.resume-header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.resume-header .subtitle {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.resume-header .tagline {
+    max-width: 800px;
+    font-size: 1rem;
+    color: #b0b8c4;
+    margin-bottom: 1.5rem;
+}
+
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.contact-info a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.2s ease;
+}
+
+.contact-info a:hover {
+    color: var(--primary-color);
+}
+
+/* Layout Container */
+.resume-container {
+    display: flex;
+    max-width: 1100px;
+    margin: 2rem auto;
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+/* Typography elements */
+h2 {
+    font-size: 1.3rem;
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+h2 i {
+    color: var(--primary-color);
+}
+
+/* Sidebar (Left Column) */
+.sidebar {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.skill-group {
+    margin-bottom: 1rem;
+}
+
+.skill-group h3 {
+    font-size: 0.95rem;
+    color: var(--secondary-color);
+    margin-bottom: 0.25rem;
+}
+
+.skill-group p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.certs-section ul {
+    list-style: none;
+}
+
+.certs-section li {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1.2rem;
+}
+
+.certs-section li::before {
+    content: "✓";
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.edu-item h3 {
+    font-size: 1rem;
+    color: var(--secondary-color);
+}
+
+.edu-item .institution {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.edu-item .coursework {
+    font-size: 0.85rem;
+    color: #555;
+}
+
+.focus-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.focus-tags span {
+    background-color: var(--light-bg);
+    border: 1px solid var(--border-color);
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* Main Content (Right Column) */
+.main-content {
+    flex: 2.5;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.job, .project {
+    margin-bottom: 1.5rem;
+}
+
+.job-header, .project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.25rem;
+}
+
+.job-header h3, .project-header h3 {
+    font-size: 1.15rem;
+    color: var(--secondary-color);
+}
+
+.project-header a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.project-header a:hover {
+    color: var(--primary-color);
+}
+
+.job-header .date {
+    font-size: 0.85rem;
+    color: #777;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.company {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.tech-stack {
+    font-size: 0.85rem;
+    font-style: italic;
+    color: #666;
+    background-color: var(--light-bg);
+    padding: 0.2rem 0.5rem;
+    display: inline-block;
+    border-radius: 4px;
+    margin-bottom: 0.75rem;
+}
+
+ul {
+    padding-left: 1.2rem;
+}
+
+li {
+    font-size: 0.95rem;
+    margin-bottom: 0.4rem;
+    color: #444;
+}
+
+li strong {
+    color: #111;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    margin-top: 4rem;
+    background-color: var(--light-bg);
+    border-top: 1px solid var(--border-color);
+    font-size: 0.85rem;
+    color: #777;
+}
+
+/* Responsive Viewports */
+@media (max-width: 768px) {
+    .resume-container {
+        flex-direction: column;
+    }
+    .job-header, .project-header {
+        flex-direction: column;
+    }
+    .job-header .date {
+        margin-top: 0.25rem;
+        margin-bottom: 0.5rem;
+    }
+    .contact-info {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+}
