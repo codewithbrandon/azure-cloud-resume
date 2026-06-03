@@ -1,0 +1,29 @@
+name: Deploy Frontend to Azure Blob Storage
+
+on:
+  push:
+    branches:
+      - main  # Triggers the automation workflow every time you push to the main branch
+
+jobs:
+  locate-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    
+    # 1. Pull down your repository code onto the runner machine
+    - name: Checkout Code Repository
+      uses: actions/checkout@v4
+
+    # 2. Log into Azure Blob Storage and sync your static files
+    - name: Upload Static Assets to Azure $web Container
+      uses: azure/CLI@v2
+      with:
+        azcliversion: latest
+        inlineScript: |
+          az storage blob upload-batch \
+            --account-name brandonresume2026 \
+            --auth-mode key \
+            --connection-string "${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}" \
+            --source . \
+            --destination '$web' \
+            --overwrite true
