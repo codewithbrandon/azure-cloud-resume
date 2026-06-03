@@ -193,5 +193,28 @@
         <p>&copy; 2026 Brandon Harris. Built for the Azure Cloud Resume Challenge.</p>
     </footer>
 
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            getVisitorCount();
+        });
+
+        const functionApi = "https://brandon-resume-api-f6ehf9hyfgqcg6gt.eastus-01.azurewebsites.net/api/GetResumeCounter"; 
+
+        const getVisitorCount = () => {
+            let count = 0;
+            fetch(functionApi)
+                .then(response => response.json())
+                .then(response => {
+                    console.log("API successfully connected.");
+                    count = response.count;
+                    document.getElementById('counter').innerText = count;
+                })
+                .catch(function(error) {
+                    console.log("API connection failed:", error);
+                    document.getElementById('counter').innerText = "Unavailable";
+                });
+            return count;
+        }
+    </script>
 </body>
 </html>
